@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% for izd in izds %}
+
+        Изделие:{{ izd.izd_cod }} {{ izd.izd_name }}<br>
+        {% for up in izd.up_set.all %}
+            упак:{{ up.up_num }} {{ up.up_type }}<br>
+            {% for color in up.izd_color.all %}
+                цвет:{{ color.color_name }}<br>
+            {% endfor %}
+        {% endfor %}
+        <br>
+
+
+    {% endfor %}
+
+
+</body>
+</html>
