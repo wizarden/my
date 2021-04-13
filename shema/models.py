@@ -1,3 +1,4 @@
+# C:\Users\User\PycharmProjects\my\venv\Lib\site-packages\django\contrib\admin\static\admin\js
 from django.db import models
 
 
@@ -81,7 +82,7 @@ class Up(models.Model):
     izd_name1 = models.CharField(max_length=100, default="", verbose_name="Имя")
     izd_name2 = models.CharField(max_length=100, default="", verbose_name="Модуль")
 
-    up_num = models.CharField(max_length=2, verbose_name="№ упак.")
+    up_num = models.CharField(max_length=200, verbose_name="№ упак.")
     up_type = models.ForeignKey(UpType, on_delete=models.PROTECT, null=True, blank=True, verbose_name="Тип")
     up_color = models.ManyToManyField(Color, blank=True, verbose_name="Цвет")
     up_color_group = models.ManyToManyField(ColorGroup, blank=True, verbose_name="Группа цветов")

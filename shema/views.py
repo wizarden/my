@@ -8,6 +8,10 @@ def index(request):
     return HttpResponse("1")
 
 
+def list_izd(request):
+
+    return render(request, 'list_izd.html', locals())
+
 
 #    ups = Up.objects.all()
 
